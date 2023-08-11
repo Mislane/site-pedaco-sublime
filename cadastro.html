@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedaço Sublime | Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.11.0/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        function efeitos() {
+            const defaults = {
+                spread: 360,
+                ticks: 50,
+                gravity: 0,
+                decay: 0.94,
+                startVelocity: 30,
+                shapes: ["star"],
+                colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+            };
+
+            function shoot() {
+                confetti({
+                    ...defaults,
+                    particleCount: 40,
+                    scalar: 1.2,
+                    shapes: ["star"],
+                });
+
+                confetti({
+                    ...defaults,
+                    particleCount: 10,
+                    scalar: 0.75,
+                    shapes: ["circle"],
+                });
+            }
+
+            setTimeout(shoot, 0);
+            setTimeout(shoot, 100);
+            setTimeout(shoot, 200);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="logo_nome">
+            <a href="index.html">
+                <div id="logo">
+                    <img src="imagens/logops.png" width="100%" height="100%">
+                </div>
+            </a>
+            <h1>PEDAÇO SUBLIME</h1>
+        </div>
+        <nav id="produtos_local">
+            <div class="links_cabecalho">
+                <a class="estilo_links" href="produtos.html">
+                    <h1>Cardapio</h1>
+                </a>
+                <a class="estilo_links"
+                    href="https://www.google.com.br/maps/place/Senai/@-19.4065219,-40.0609251,17z/data=!3m1!4b1!4m6!3m5!1s0xb628aa4674e73f:0xb1e5bd7adb87b443!8m2!3d-19.406527!4d-40.0583502!16s%2Fg%2F1ts1tgs3?entry=ttu">
+                    <h1> Localização </h1>
+                </a>
+                <a class="estilo_links" href="login.html">
+                    <h1> Login</h1>
+                </a>
+            </div>
+
+            <div id="search">
+                <div class="buscar">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                    <input type="text" id="buscar" placeholder="Buscar...">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="login">
+            <form>
+                <fieldset class="fieldset_cadastro">
+                    <legend><strong>DADOS PESSOAIS</strong></legend>
+                    <label for="nome">Digite seu nome completo:</label>
+                    <input type="text" name="nome" id="nome" required>
+                    <label for="sobrenome"> Digite seu sobrenome: </label>
+                    <input type="text" nome="sobrenome" id="sobrenome" required>
+                    <label for="cpf">Digite seu CPF: </label>
+                    <input type="tel" name="cpf" id="cpf" required placeholder="xxx.xxx.xxx-xx">
+                    <label for="nascimento">Selecione sua data de nascimento: </label>
+                    <input type="date" name="nascimento" id="nascimento">
+                </fieldset>
+                <br>
+                <fieldset class="fieldset_cadastro">
+                    <legend> <strong>CONTATO</strong></legend>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
+                    <label for="email"> E-mail</label>
+                    <input type="email" name="email" id="email">
+                </fieldset>
+                <br>
+                <fieldset class="fieldset_cadastro">
+                    <legend><strong> LOCALIZAÇÃO</strong></legend>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="ciadade" id="cidade">
+                    <label for="cep">Digite seu CEP:</label>
+                    <input type="cep" name="cep" id="cep" required>
+                    <label for="complemento">Complemento do endereço:</label>
+                    <input type="text" name="complemento" id="complemento">
+                </fieldset>
+                <br>
+            
+                <input class="botao_cadastro" type="submit" value="Realizar Cadastro" onclick="efeitos()">
+               
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="somos">
+            <h1>Quem somos</h1>
+            <h3>Bem-vindo ao universo do sabor e da doçura, bem-vindo à Pedaço Sublime! Somos mais do que uma simples confeitaria; somos a expressão da arte culinária, onde a paixão pela confeitaria se funde com a busca incessante pela perfeição em cada criação. Aqui, cada bolo é um pedaço de felicidade cuidadosamente elaborado para encantar os sentidos e tocar o coração.
+                </h3>
+        </div>
+        <nav id="contatos">
+            <div class="caixa_logo_redes">
+                <a href="https://www.facebook.com/AnaMariaBraga/">
+                    <img src="imagens/logo_face.png" width="60px" height="60px">
+                </a>
+            </div>
+            <div class="caixa_logo_redes">
+                <a href="https://www.instagram.com/casimiro/">
+                    <img src="imagens/logo_insta.png" width="60px" height="60px">
+                </a>
+            </div>
+            <div class="caixa_logo_redes">
+                <a href="https://www.instagram.com/melodyoficial3/?hl=pt">
+                    <img src="imagens/logo_whats.png" width="60px" height="60px">
+                </a>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>
